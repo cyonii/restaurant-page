@@ -1,5 +1,3 @@
 'use strict';
 
-import './style.css';
-
-console.log("Hello, Nina");
+console.log("Hello, Webpack");
