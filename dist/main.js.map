@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://restaurant-page/./src/index.js"],"names":[],"mappings":";;;;;;AAAa;;AAEb","file":"main.js","sourcesContent":["'use strict';\n\nconsole.log(\"Hello, Webpack\");\n"],"sourceRoot":""}
