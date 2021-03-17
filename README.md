@@ -29,16 +29,16 @@ This repo contains a simple restaurant web application. The goal is to render th
 
 ## Authors
 👤 **CY Kalu**
-- GitHub: [@sinansevgi](https://github.com/cyonii)
-- LinkedIn: [@sinansevgi](https://www.linkedin.com/in/cyonii/)
-- Twitter: [@nativeofcybers1](https://twitter.com/cy_kalu)
+- GitHub: [@cyonii](https://github.com/cyonii)
+- LinkedIn: [@cyonii](https://www.linkedin.com/in/cyonii/)
+- Twitter: [@theOnuoha](https://twitter.com/cy_kalu)
 - Portfolio: [Website](https://cykalu.me)
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/sinansevgi/Restaurant_Page/issues).
+Feel free to check the [issues page](https://github.com/cyonii/restaurant-page/issues).
 
 
 ## Acknowledgements
