@@ -109,25 +109,24 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "contactPage": () => (/* binding */ contactPage)
+/* harmony export */   "default": () => (/* binding */ contactPage)
 /* harmony export */ });
-
-
 function contactPage() {
   const contactInfoWrapper = document.createElement('div');
+  const contactInfo = [
+    ['Location', '#89b Forest Hill Drive, Loopside, PL 09098'],
+    ['Opening Hours', 'Mon-Thurs:8am-8pm, Fri-Sun:8am-11pm'],
+  ];
 
   contactInfoWrapper.classList.add('contact-info');
 
-  [
-    ['Location', '#89b Forest Hill Drive, Loopside, PL 09098'],
-    ['Opening Hours', 'Mon-Thurs:8am-8pm, Fri-Sun:8am-11pm']
-  ].forEach((item) => {
+  contactInfo.forEach((info) => {
     const row = document.createElement('p');
     const label = document.createElement('span');
-    const data = document.createTextNode(item[1]);
+    const data = document.createTextNode(info[1]);
 
     label.classList.add('label');
-    label.innerText = item[0];
+    [label.innerText] = info;
     row.appendChild(label);
     row.appendChild(data);
     contactInfoWrapper.appendChild(row);
@@ -135,8 +134,6 @@ function contactPage() {
 
   return contactInfoWrapper;
 }
-
-
 
 
 /***/ }),
@@ -149,11 +146,9 @@ function contactPage() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "landingPage": () => (/* binding */ landingPage)
+/* harmony export */   "default": () => (/* binding */ landingPage)
 /* harmony export */ });
 /* harmony import */ var _images_food_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/food.jpg */ "./src/images/food.jpg");
-
-
 
 
 function landingPage() {
@@ -167,7 +162,7 @@ function landingPage() {
 
   heroImage.src = _images_food_jpg__WEBPACK_IMPORTED_MODULE_0__.default;
   heroImage.classList.add('hero-image');
-  heroButton.innerText = 'You\'re Welcome';
+  heroButton.innerText = "You're Welcome";
   heroButton.classList.add('hero-btn');
   heroTagline.innerHTML = 'Treat yourself to the best intercontinental dishes. <br /> Stop over';
   heroTagline.classList.add('hero-tagline');
@@ -187,8 +182,6 @@ function landingPage() {
 }
 
 
-
-
 /***/ }),
 
 /***/ "./src/modules/menu.js":
@@ -199,14 +192,12 @@ function landingPage() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "menuPage": () => (/* binding */ menuPage)
+/* harmony export */   "default": () => (/* binding */ menuPage)
 /* harmony export */ });
 /* harmony import */ var _images_menu_cheeseburger_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/menu/cheeseburger.png */ "./src/images/menu/cheeseburger.png");
 /* harmony import */ var _images_menu_double_cheeseburger_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/menu/double-cheeseburger.png */ "./src/images/menu/double-cheeseburger.png");
 /* harmony import */ var _images_menu_grilled_cheese_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/menu/grilled-cheese.png */ "./src/images/menu/grilled-cheese.png");
 /* harmony import */ var _images_menu_hamburger_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/menu/hamburger.png */ "./src/images/menu/hamburger.png");
-
-
 
 
 
@@ -225,7 +216,7 @@ const todayMenu = [
   new Meal('Cheeseburger', 2.59, 'Buns, patty, tomato, onions, lettuce, and secret recipe.', _images_menu_cheeseburger_png__WEBPACK_IMPORTED_MODULE_0__.default),
   new Meal('Double Cheeseburger', 3.49, 'Cheeseburger, but with extra patty.', _images_menu_double_cheeseburger_png__WEBPACK_IMPORTED_MODULE_1__.default),
   new Meal('Grilled Cheese Sandwich', 4.99, 'toasted, grilled cheese sandwich', _images_menu_grilled_cheese_png__WEBPACK_IMPORTED_MODULE_2__.default),
-  new Meal('Hamburger', 4.99, 'Buns, patty, tomato, onions, lettuce, and secret recipe.', _images_menu_hamburger_png__WEBPACK_IMPORTED_MODULE_3__.default)
+  new Meal('Hamburger', 4.99, 'Buns, patty, tomato, onions, lettuce, and secret recipe.', _images_menu_hamburger_png__WEBPACK_IMPORTED_MODULE_3__.default),
 ];
 
 function addToMenu(meal) {
@@ -259,7 +250,7 @@ function menuPage() {
   const paneTitle = document.createElement('h2');
   const menuList = document.createElement('ul');
 
-  todayMenu.forEach(meal => menuList.appendChild(addToMenu(meal)));
+  todayMenu.forEach((meal) => menuList.appendChild(addToMenu(meal)));
 
   paneTitle.innerText = 'On Our Menu Today';
   paneTitle.classList.add('text-primary');
@@ -269,8 +260,6 @@ function menuPage() {
   menuWrapper.classList.add('menu');
   return menuWrapper;
 }
-
-
 
 
 /***/ }),
@@ -283,13 +272,11 @@ function menuPage() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "navbar": () => (/* binding */ navbar)
+/* harmony export */   "default": () => (/* binding */ navbar)
 /* harmony export */ });
-
-
-function createMenuItem(linkName, active=false) {
+function createMenuItem(linkName, active = false) {
   const navItem = document.createElement('li');
-  const navLink = document.createElement('a')
+  const navLink = document.createElement('a');
 
   navItem.classList.add('nav-item');
   navLink.href = '#';
@@ -314,7 +301,7 @@ function navbar() {
   navbarMenu.classList.add('navbar-menu');
   navLinks.forEach((link, index) => {
     let active = false;
-    if (index == 0) active = true;
+    if (index === 0) active = true;
     navbarMenu.appendChild(createMenuItem(link, active));
   });
 
@@ -323,8 +310,6 @@ function navbar() {
 
   return header;
 }
-
-
 
 
 /***/ })
@@ -405,36 +390,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-const content = document.getElementById('content');
-const contentInner = document.createElement('div');
+const content = document.getElementById("content");
+const contentInner = document.createElement("div");
 const pane = {
-  home: _modules_home__WEBPACK_IMPORTED_MODULE_3__.landingPage,
-  menu: _modules_menu__WEBPACK_IMPORTED_MODULE_4__.menuPage,
-  contact: _modules_contact__WEBPACK_IMPORTED_MODULE_5__.contactPage
+  home: _modules_home__WEBPACK_IMPORTED_MODULE_3__.default,
+  menu: _modules_menu__WEBPACK_IMPORTED_MODULE_4__.default,
+  contact: _modules_contact__WEBPACK_IMPORTED_MODULE_5__.default,
 };
 
-content.appendChild((0,_modules_navbar__WEBPACK_IMPORTED_MODULE_2__.navbar)());
-contentInner.setAttribute('id', 'content-inner');
-contentInner.appendChild((0,_modules_home__WEBPACK_IMPORTED_MODULE_3__.landingPage)());
+content.appendChild((0,_modules_navbar__WEBPACK_IMPORTED_MODULE_2__.default)());
+contentInner.setAttribute("id", "content-inner");
+contentInner.appendChild((0,_modules_home__WEBPACK_IMPORTED_MODULE_3__.default)());
 content.appendChild(contentInner);
 
-const navLinks = document.querySelectorAll('[data-pane]');
+const navLinks = document.querySelectorAll("[data-pane]");
 
-navLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
     event.preventDefault();
-    if (event.currentTarget.classList.contains('active')) return;
+    if (event.currentTarget.classList.contains("active")) return;
 
-    const activeLink = document.querySelector('.nav-link.active');
-    const currentPane = pane[event.currentTarget.getAttribute('data-pane')];
+    const activeLink = document.querySelector(".nav-link.active");
+    const currentPane = pane[event.currentTarget.getAttribute("data-pane")];
 
-    activeLink.classList.remove('active');
-    event.currentTarget.classList.add('active');
-    contentInner.innerHTML = '';
+    activeLink.classList.remove("active");
+    event.currentTarget.classList.add("active");
+    contentInner.innerHTML = "";
     contentInner.appendChild(currentPane());
-  })
+  });
 });
 
 })();

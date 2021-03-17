@@ -37,8 +37,6 @@ img {
   padding-bottom: 1rem; }
   .header .navbar-menu {
     display: flex;
-    flex-wrap: nowrap;
-    flex-flow: row wrap;
     list-style: none; }
     .header .navbar-menu .nav-item:not(:last-child) {
       margin-right: 1rem; }
