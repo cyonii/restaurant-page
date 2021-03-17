@@ -23,6 +23,15 @@ button {
   border: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1em;
+}
+
 header {
   background: #eee;
 }
@@ -113,6 +122,32 @@ img {
   }
 }
 
+// Menu Pane
+.menu {
+  .menu-list-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    .menu-cover {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    .menu-body {
+      margin-left: 1rem;
+
+      .meal-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .meal-price {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
 // Contact pane
 .contact-info {
   background: $secondary;
@@ -150,4 +185,8 @@ img {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.text-primary {
+  color: $primary;
 }

@@ -30,7 +30,7 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: '[folder]/[name].[ext]',
             outputPath: 'images/',
             publicPath: 'images/',
           }
