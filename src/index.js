@@ -24,6 +24,7 @@ const navLinks = document.querySelectorAll('[data-pane]');
 
 navLinks.forEach(link => {
   link.addEventListener('click', (event) => {
+    event.preventDefault();
     if (event.currentTarget.classList.contains('active')) return;
 
     const activeLink = document.querySelector('.nav-link.active');
