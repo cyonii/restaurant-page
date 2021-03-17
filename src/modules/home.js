@@ -1,5 +1,3 @@
-'use strict';
-
 import heroImgSrc from '../images/food.jpg';
 
 function landingPage() {

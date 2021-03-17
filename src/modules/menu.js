@@ -1,5 +1,3 @@
-'use strict';
-
 import cheeseburger from '../images/menu/cheeseburger.png';
 import doubleCheeseburger from '../images/menu/double-cheeseburger.png';
 import grilledCheese from '../images/menu/grilled-cheese.png';
