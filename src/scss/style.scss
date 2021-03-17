@@ -19,6 +19,10 @@ a {
   color: $dark;
 }
 
+button {
+  border: none;
+}
+
 header {
   background: #eee;
 }
@@ -95,11 +99,6 @@ img {
       font-size: 17px;
       font-weight: bold;
       transition: 0.3s;
-
-      &:hover {
-        box-shadow: 0 0 0 3px $primary, 0 0 0 6px $white;
-        opacity: 95%;
-      }
     }
   }
 
@@ -116,7 +115,19 @@ img {
 
 // Main content
 #content {
-  // margin: 2rem auto;
+  &-inner {
+    // background-color: $secondary;
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: lighter;
+
+    p:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 /* Utilitites */

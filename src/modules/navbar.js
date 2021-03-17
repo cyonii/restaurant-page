@@ -9,6 +9,7 @@ function createMenuItem(linkName, active=false) {
   navLink.href = '#';
   navLink.innerText = linkName;
   navLink.classList.add('nav-link');
+  navLink.setAttribute('data-pane', linkName.toLowerCase());
 
   if (active) navLink.classList.add('active');
 
