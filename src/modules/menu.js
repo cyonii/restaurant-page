@@ -16,7 +16,7 @@ const todayMenu = [
   new Meal('Cheeseburger', 2.59, 'Buns, patty, tomato, onions, lettuce, and secret recipe.', cheeseburger),
   new Meal('Double Cheeseburger', 3.49, 'Cheeseburger, but with extra patty.', doubleCheeseburger),
   new Meal('Grilled Cheese Sandwich', 4.99, 'toasted, grilled cheese sandwich', grilledCheese),
-  new Meal('Hamburger', 4.99, 'Buns, patty, tomato, onions, lettuce, and secret recipe.', hamburger)
+  new Meal('Hamburger', 4.99, 'Buns, patty, tomato, onions, lettuce, and secret recipe.', hamburger),
 ];
 
 function addToMenu(meal) {
@@ -45,12 +45,12 @@ function addToMenu(meal) {
   return listItem;
 }
 
-function menuPage() {
+export default function menuPage() {
   const menuWrapper = document.createElement('div');
   const paneTitle = document.createElement('h2');
   const menuList = document.createElement('ul');
 
-  todayMenu.forEach(meal => menuList.appendChild(addToMenu(meal)));
+  todayMenu.forEach((meal) => menuList.appendChild(addToMenu(meal)));
 
   paneTitle.innerText = 'On Our Menu Today';
   paneTitle.classList.add('text-primary');
@@ -60,5 +60,3 @@ function menuPage() {
   menuWrapper.classList.add('menu');
   return menuWrapper;
 }
-
-export { menuPage }

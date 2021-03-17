@@ -1,6 +1,6 @@
-function createMenuItem(linkName, active=false) {
+function createMenuItem(linkName, active = false) {
   const navItem = document.createElement('li');
-  const navLink = document.createElement('a')
+  const navLink = document.createElement('a');
 
   navItem.classList.add('nav-item');
   navLink.href = '#';
@@ -14,7 +14,7 @@ function createMenuItem(linkName, active=false) {
   return navItem;
 }
 
-function navbar() {
+export default function navbar() {
   const navLinks = ['Home', 'Menu', 'Contact'];
   const header = document.createElement('header');
   const navbar = document.createElement('nav');
@@ -25,7 +25,7 @@ function navbar() {
   navbarMenu.classList.add('navbar-menu');
   navLinks.forEach((link, index) => {
     let active = false;
-    if (index == 0) active = true;
+    if (index === 0) active = true;
     navbarMenu.appendChild(createMenuItem(link, active));
   });
 
@@ -34,5 +34,3 @@ function navbar() {
 
   return header;
 }
-
-export { navbar }

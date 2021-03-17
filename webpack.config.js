@@ -1,47 +1,52 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, 'dist'),
+    filename: "bundle.js",
+    path: path.join(__dirname, "dist"),
     clean: true,
   },
-  mode: 'development',
-  devtool: 'source-map',
+  mode: "development",
+  devtool: "source-map",
   devServer: {
-    contentBase: './dist',
+    contentBase: "./dist",
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(css|sass|scss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.html$/i,
-        use: [{
-          loader: 'html-loader'
-        }]
+        use: [
+          {
+            loader: "html-loader",
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[folder]/[name].[ext]',
-            outputPath: 'images/',
-            publicPath: 'images/',
-          }
-        }]
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[folder]/[name].[ext]",
+              outputPath: "images/",
+              publicPath: "images/",
+            },
+          },
+        ],
       },
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    })
-  ]
-}
+      template: "src/index.html",
+    }),
+  ],
+};

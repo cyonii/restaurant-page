@@ -52,8 +52,6 @@ img {
 
     &-menu {
       display: flex;
-      flex-wrap: nowrap;
-      flex-flow: row wrap;
       list-style: none;
 
       .nav-item {

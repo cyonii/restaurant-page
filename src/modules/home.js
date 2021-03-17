@@ -1,6 +1,6 @@
 import heroImgSrc from '../images/food.jpg';
 
-function landingPage() {
+export default function landingPage() {
   const heroContainer = document.createElement('div');
   const heroWrapper = document.createElement('div');
   const heroBody = document.createElement('div');
@@ -11,7 +11,7 @@ function landingPage() {
 
   heroImage.src = heroImgSrc;
   heroImage.classList.add('hero-image');
-  heroButton.innerText = 'You\'re Welcome';
+  heroButton.innerText = "You're Welcome";
   heroButton.classList.add('hero-btn');
   heroTagline.innerHTML = 'Treat yourself to the best intercontinental dishes. <br /> Stop over';
   heroTagline.classList.add('hero-tagline');
@@ -29,5 +29,3 @@ function landingPage() {
 
   return heroContainer;
 }
-
-export { landingPage }
