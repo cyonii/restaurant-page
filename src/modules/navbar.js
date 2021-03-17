@@ -1,6 +1,5 @@
 'use strict';
 
-
 function createMenuItem(linkName, active=false) {
   const navItem = document.createElement('li');
   const navLink = document.createElement('a')

@@ -13,7 +13,6 @@ function landingPage() {
 
   heroImage.src = heroImgSrc;
   heroImage.classList.add('hero-image');
-  // heroButton.href = '#';
   heroButton.innerText = 'You\'re Welcome';
   heroButton.classList.add('hero-btn');
   heroTagline.innerHTML = 'Treat yourself to the best intercontinental dishes. <br /> Stop over';
